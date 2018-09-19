@@ -1,0 +1,4 @@
+recursive-include tgproj/public *
+include tgproj/public/favicon.ico
+recursive-include tgproj/i18n *
+recursive-include tgproj/templates *

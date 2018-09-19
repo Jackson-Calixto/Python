@@ -1,0 +1,4 @@
+recursive-include demoproj/public *
+include demoproj/public/favicon.ico
+recursive-include demoproj/i18n *
+recursive-include demoproj/templates *

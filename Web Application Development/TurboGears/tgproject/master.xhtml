@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="${response.charset}" />
+
+  <title py:block="master_title">Your generic title goes here</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="${tg.url('/css/bootstrap.min.css')}" />
+  <link rel="stylesheet" type="text/css" media="screen" href="${tg.url('/css/style.css')}" />
+
+  <py:block name="head"></py:block>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-default">
+    <div class="collapse navbar-collapse" id="navbar-content">
+      <ul class="nav navbar-nav">
+        <li class="${('', 'active')[self.defined('page') and page=='index']}"><a href="${tg.url('/')}">Welcome</a></li>
+        <li class="${('', 'active')[self.defined('page') and page=='about']}"><a href="${tg.url('/about')}">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Flash messages -->
+    <py:block name="body"></py:block>
+  </div>
+
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="${tg.url('/javascript/bootstrap.min.js')}"></script>
+</body>
+</html>

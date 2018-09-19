@@ -1,0 +1,18 @@
+<html py:extends="master.xhtml" py:strip="True">
+  <head py:block="head" py:strip="True">
+    <title py:block="master_title">Demo Template</title>
+    <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org" />
+  </head>
+
+  <body py:block="body" py:strip="True">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-header">
+          <h2>Demo Template with Local Variable</h2>
+        </div>
+
+        <p>Local variable passed to this template: ${myvar}</p>
+      </div>
+    </div>
+  </body>
+</html>
