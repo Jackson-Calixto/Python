@@ -21,5 +21,8 @@ from django.contrib.auth.views import LoginView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', my_views.home, name='home'),
-    url(r'^login/$', LoginView.as_view(), name="mymsgsite_login"),
+    url(r'^login/$', LoginView.as_view(),
+
+        name="mymsgsite_login"),
+    url(r'^about/$', my_views.about, name='about')
 ]

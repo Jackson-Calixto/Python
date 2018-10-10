@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<body>
+
+    <h2 style = "text-align: center;">New Car Form</h2>
+
+    {% for message in form.make.errors %}
+        <div>{{ message }}</div>
+    {% endfor %}
+
+    {% for message in form.model.errors %}
+        <div>{{ message }}</div>
+    {% endfor %}
+
+    {% for message in form.year.errors %}
+        <div>{{ message }}</div>
+    {% endfor %}
+
+    <form action = "{{request.path}}" method = post>
+        <fieldset>
+            <legend>Add a New Car</legend>
+            {{ form.hidden_tag() }}
+
+            <div style = "font-size: 20px; font-weight: bold; margin-left: 150px;">
+                {{ form.make.label }}<br>
+                {{ form.make }}
+                <br>
+
+                {{ form.model.label }}<br>
+                {{ form.model }}
+                <br>
+
+                {{ form.year.label }}<br>
+                {{ form.year }}
+                <br>
+
+                {{ form.transmission.label }}<br>
+                {{ form.transmission }}
+                <br>
+
+                {{ form.submit }}
+            </div>
+
+        </fieldset>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> My Flask App </title>
+</head>
+<body>
+    <div>
+        <P>Summary of Scores: </P>
+        <table border=1>
+            {% for key, value in scores.items() %}
+            <tr>
+                <th> {{ key }} </th>
+                <td> {{ value }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
